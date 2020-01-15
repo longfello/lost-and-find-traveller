@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'rouble';
+    src: url('alsrubl-verdana-regular.eot');
+    src: url('alsrubl-verdana-regular.eot?#iefix') format('embedded-opentype'),
+    url('alsrubl-verdana-regular.woff') format('woff'),
+    url('alsrubl-verdana-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aleksandracregular';
+    src: url('aleksandrac_regular.eot');
+    src: url('aleksandrac_regular.eot?#iefix') format('embedded-opentype'),
+         url('aleksandrac_regular.woff') format('woff'),
+         url('aleksandrac_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('Roboto-Light.ttf') format('truetype');
+}
+
+#collapseExample .right-column .man-1 {
+    background-size: 45% !important;
+    background-position-y: 100% !important;
+}
+#collapseExample .right-column .man-2 {
+    background-size: 55% !important;
+    background-position-y: 100%;
+}
+#collapseExample .right-column .man-3 {
+    background-size: 65% !important;
+    background-position-y: 100%;
+}
+
+#collapseExample .right-column .man-4 {
+    background-size: 75% !important;
+    background-position-y: 100%;
+}
+
+#collapseExample .amount-block-man input[type="radio"]:checked + label.man.man-1,
+#collapseExample .right-column .amount-block-man .man.man-1:hover{
+    background: transparent url(/images/active-man4.png) no-repeat 0 100%  !important;
+    background-size: 45% !important;
+
+
+}
+#collapseExample .amount-block-man input[type="radio"]:checked + label.man.man-2,
+#collapseExample .right-column .amount-block-man .man.man-2:hover{
+    background: transparent url(/images/active-man4.png) no-repeat 0 100% !important;
+    background-size: 55% !important;
+
+
+}
+
+#collapseExample .amount-block-man input[type="radio"]:checked + label.man.man-3,
+#collapseExample .right-column .amount-block-man .man.man-3:hover{
+    background: transparent url(/images/active-man4.png) no-repeat 0 100% !important;
+    background-size: 65% !important;
+
+
+}
+#collapseExample .amount-block-man input[type="radio"]:checked + label.man.man-4,
+#collapseExample .right-column .amount-block-man .man.man-4:hover{
+    background: transparent url(/images/active-man4.png) no-repeat 0 100% !important;
+    background-size: 75% !important;
+
+
+}
+#collapseExample .right-column .man {
+    display: inline-block;
+    background: url(/images/not-active-man3.png) no-repeat 0 100%;
+    width: 70px;
+    height: 125px;
+    margin-bottom: 0;
+    background-position-y: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#collapseExample .right-column p{
+    line-height: 25px;
+}
+#collapseExample .right-column{
+    padding: 0;
+    text-align: center;
+}

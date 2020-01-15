@@ -1,0 +1,24 @@
+
+
+@font-face {
+    font-family: 'aleksandracregular';
+    src: url('aleksandrac_regular.eot');
+    src: url('aleksandrac_regular.eot?#iefix') format('embedded-opentype'),
+         url('aleksandrac_regular.woff') format('woff'),
+         url('aleksandrac_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('Roboto-Light.ttf') format('truetype');
+}

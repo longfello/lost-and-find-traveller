@@ -1,0 +1,419 @@
+<?php
+/* @var $this Controller */
+Yii::app()->getClientScript()->registerCoreScript('jquery');
+Yii::app()->getClientScript()->registerCoreScript('jquery.ui');
+Yii::app()->getClientScript()->registerScriptFile('/js/jquery.maskedinput.js');
+Yii::app()->getClientScript()->registerScriptFile('/js/jquery.form.min.js');
+Yii::app()->getClientScript()->registerScriptFile('/js/jquery.selectbox-0.2.min.js');
+Yii::app()->getClientScript()->registerScriptFile('/js/share42/share42.js');
+Yii::app()->clientScript->registerCssFile(
+        Yii::app()->clientScript->getCoreScriptUrl() .
+        '/jui/css/base/jquery-ui.css'
+);
+$language = Yii::app()->language;
+global $current_service;
+global $domain;
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
+        <link rel="image_src" href="logo.png">
+        <meta property="og:image" content="logo.png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- blueprint CSS framework -->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts/aleksandrac.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.selectbox.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+            <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+            <script type="text/javascript" src="/js/common.js"></script>
+            <script type="text/javascript" src="/js/messages.js.php"></script>
+            <script type="text/javascript" src="/js/main.js"></script>
+
+            <!--GoogleAnalytics-->
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-52410305-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+            <!--/GoogleAnalytics-->
+    </head>
+
+    <body>
+        <div id="ajax-error-message" style="display: none"></div>
+        <div class="container" id="page">
+
+            <div class="main-wrapper"><div class="main-content">
+                    <div id="header-wrapper">
+                        <div id="header">
+                            <div id="logo"><a href="/"><img src="/images/logo.png" /><div class="text"><?= Yii::t('main', "Единая информационная служба") ?></div></a></div>
+
+                            <div id="mainmenu" class="mainmenu">
+                                <?php
+                                switch ($domain) {
+                                    case "poputchik":
+                                        $this->widget('zii.widgets.CMenu', array(
+                                            'items' => array(
+                                                array('label' => 'Все сервисы', 'url' => 'http://infotoway.ru/', 'linkOptions' => array('title' => 'Все сервисы')),
+                                                array('label' => 'Попутчик по городу', 'url' => '/poputchik-po-gorodu', 'linkOptions' => array('title' => 'Попутчик по городу')),
+                                                array('label' => 'Попутчик в другой город', 'url' => '/poputchik-v-gorod', 'linkOptions' => array('title' => 'Попутчик в другой город')),
+                                                array('label' => 'О сервисе', 'url' => array('/o-servise'), 'linkOptions' => array('title' => 'О сервисе')),
+                                                /* array('label' => 'Все сервисы', 'url' => 'http://infotoway.ru/'), */
+                                                array('url' => '/admin', 'label' => 'Админка', 'visible' => Yii::app()->user->checkAccess('admin'), 'linkOptions' => array('title' => 'Админка')),
+                                            ),
+                                        ));
+                                        break;
+                                    case "buronahodok":
+                                        $this->widget('zii.widgets.CMenu', array(
+                                            'items' => array(
+                                                array('label' => 'Все сервисы', 'url' => 'http://infotoway.ru/', 'linkOptions' => array('title' => 'Все сервисы')),
+                                                array('label' => 'Потери', 'url' => '/poteri', 'linkOptions' => array('title' => 'Потери')),
+                                                array('label' => 'Находки', 'url' => '/nahodki', 'linkOptions' => array('title' => 'Находки')),                                        
+                                                array('label' => 'Правовая информация', 'url' => '#', 'linkOptions' => array('title' => 'Правовая информация')),
+                                                array('label' => 'Правила поведения', 'url' => '/pravila-polzovaniya-servisom', 'linkOptions' => array('title' => 'Правила поведения')),
+                                                array('url' => '/admin', 'label' => 'Админка', 'visible' => Yii::app()->user->checkAccess('admin')),
+                                            ),
+                                        ));
+                                        break;
+                                    case "nepoteryaika":
+                                        $this->widget('zii.widgets.CMenu', array(
+                                            'items' => array(
+                                                array('label' => 'Все сервисы', 'url' => 'http://infotoway.ru/', 'linkOptions' => array('title' => 'Все сервисы')),
+                                                array('label' => 'Непотеряйка', 'url' => array('/LostService/index'), 'linkOptions' => array('title' => 'Непотеряйка')),
+                                                array('label' => 'Об услуге', 'url' => array('/LostService/info'), 'linkOptions' => array('title' => 'Об услуге')),
+                                                array('label' => 'Получить ID', 'url' => array('/LostService/start'), 'linkOptions' => array('title' => 'Получить ID')),
+                                                array('label' => 'Сообщить о находке', 'url' => array('/LostService/ifind'), 'linkOptions' => array('title' => 'Сообщить о находке')),
+                                                array('label' => 'Купить набор', 'url' => '/#', 'linkOptions' => array('title' => 'Купить набор')),
+
+                                            ),
+
+
+
+                                        ));
+                                        break;
+                                    case "nochleg":
+                                        $this->widget('zii.widgets.CMenu', array(
+                                            'items' => array(
+                                                array('label' => 'Все сервисы', 'url' => 'http://infotoway.ru/', 'linkOptions' => array('title' => 'Все сервисы')),
+                                                array('label' => 'Добавить объявление', 'url' => '/hotelService/create', 'linkOptions' => array('title' => 'Добавить объявление')),
+                                                array('url' => '/admin', 'label' => 'Админка', 'visible' => Yii::app()->user->checkAccess('admin')),
+                                            ),
+                                        ));
+                                        break;
+                                    default:
+                                        /*    $this->widget('zii.widgets.CMenu', array(
+                                          'items' => array(
+                                          array('label' => 'О компании', 'url' => array('/site/company') ,'linkOptions'=>array('title'=>'О компании')),
+                                          array('label' => 'Попутчик', 'url' => 'http://poputchik.infotoway.ru/' ,'linkOptions'=>array('title'=>'Попутчик')),
+                                          array('label' => 'Бюро находок', 'url' => 'http://buronahodok.infotoway.ru/' ,'linkOptions'=>array('title'=>'Бюро находок')),
+                                          array('label' => 'Непотеряйка', 'url' => 'http://nepoteryaika.infotoway.ru/' ,'linkOptions'=>array('title'=>'Непотеряйка')),
+                                          array('label' => 'Контакты', 'url' => array('/site/contact') ,'linkOptions'=>array('title'=>'Контакты')),
+                                          array('url' => '/admin', 'label' => 'Админка', 'visible' => Yii::app()->user->checkAccess('admin')),
+                                          ),
+                                          )); */
+                                        break;
+                                }
+                                ?>
+                            </div><!-- mainmenu -->
+                            <?php if (Yii::app()->user->checkAccess('admin')): ?>
+
+                                <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" />
+                                <div id="mainmenu_admin" class="mainmenu">
+                                    <?php
+                                    $this->widget('zii.widgets.CMenu', array(
+                                        'items' => array(
+                                            array('label' => 'Справочники', 'url' => array('#'),
+                                                'items' => array(
+                                                    array('label' => 'Категории объектов', 'url' => array('/category/index')),
+                                                    array('label' => 'Марки автомобилей', 'url' => array('/autoBrands/index')),
+                                                    array('label' => 'Модели автомобилей', 'url' => array('/autoModels/index')),
+                                                    array('label' => 'Баннера', 'url' => array('/banners/index')),
+                                                ),
+                                            ),
+                                            array('label' => 'Местоположения', 'url' => array('#'),
+                                                'items' => array(
+                                                    array('label' => 'Страны', 'url' => array('/countries/index')),
+                                                    array('label' => 'Регионы', 'url' => array('/regions/index')),
+                                                    array('label' => 'Районы', 'url' => array('/areas/index')),
+                                                    array('label' => 'Населённые пункты', 'url' => array('/settlements/index')),
+                                                    array('label' => 'Внутригородские районы', 'url' => array('/sAreas/index')),
+                                                ),
+                                            ),
+                                            array('label' => 'Маршруты', 'url' => array('#'),
+                                                'items' => array(
+                                                    array('label' => 'Пути', 'url' => 'http://poputchik.infotoway.ru/paths/index'),
+                                                    array('label' => 'Маршруты', 'url' => 'http://poputchik.infotoway.ru/routes/index'),
+                                                ),
+                                            ),
+                                            array('label' => 'Попутчик', 'url' => 'http://poputchik.infotoway.ru/',
+                                                'items' => array(
+                                                    array('label' => 'Добавить заявку', 'url' => 'http://poputchik.infotoway.ru/poputchikOrder/create'),
+                                                    array('label' => 'Модерировать заявки', 'url' => 'http://poputchik.infotoway.ru/poputchikOrder/toModerate'),
+                                                ),
+                                            ),
+                                            array('label' => 'Бюро находок', 'url' => 'http://buronahodok.infotoway.ru/',
+                                                'items' => array(
+                                                    array('label' => 'Добавить заявку Бюро', 'url' => 'http://buronahodok.infotoway.ru/LostFound/create?type_order=1'),
+                                                    array('label' => 'Модерировать заявки Бюро', 'url' => 'http://buronahodok.infotoway.ru/LostFound/toModerate'),
+                                                    array('label' => 'Непотеряйка', 'url' => 'http://nepoteryaika.infotoway.ru/LostService/toModerate'),
+                                                ),
+                                            ),
+                                            array('label' => 'Ночлег', 'url' => 'http://nochleg.infotoway.ru/',
+                                                'items' => array(
+
+                                                  array('label' => 'Добавить заявку Ночлег', 'url' =>'http://nochleg.infotoway.ru/hotelService/create'),
+                                                    array('label' => 'Модерировать заявки Ночлег', 'url' => 'http://nochleg.infotoway.ru/hotelService/toModerate'),   
+
+
+                                                ),
+                                            ),
+
+                                            array('label' => 'Страницы', 'url' => array('/cms')),
+                                            array('label' => 'Блог', 'url' => array('/blog/admin')),
+                                            array('label' => 'Сео города', 'url' => array('/seoCity/admin')),
+                                            array('label' => 'Статистика', 'url' => array('#'),
+                                                'items' => array(
+                                                    array('label' => 'По городам', 'url' => array('/stats/city')),
+                                                    array('label' => 'Межгород', 'url' => array('/stats/intercity')),
+                                                ),
+                                            ),
+                                            array('url' => Yii::app()->getModule('user')->loginUrl, 'label' => Yii::app()->getModule('user')->t("Login"), 'visible' => Yii::app()->user->isGuest),
+                                            array('url' => Yii::app()->getModule('user')->registrationUrl, 'label' => Yii::app()->getModule('user')->t("Register"), 'visible' => Yii::app()->user->isGuest),
+                                            array('url' => Yii::app()->getModule('user')->profileUrl, 'label' => Yii::app()->getModule('user')->t("Profile"), 'visible' => !Yii::app()->user->isGuest),
+                                            array('url' => Yii::app()->getModule('user')->logoutUrl, 'label' => Yii::app()->getModule('user')->t("Logout") . ' (' . Yii::app()->user->name . ')', 'visible' => !Yii::app()->user->isGuest),
+                                        ),
+                                    ));
+                                    ?>
+                                </div>
+                                <div class="space_for_menu" ></div>
+<?php endif; ?>
+
+                            <div id="account-menu">
+<?php if (Yii::app()->user->isGuest): ?>
+                                    <a class="login ajax" href="#"><?= Yii::t('general', 'Войти') ?></a>
+                                    <div id="login-form" class="form ext" style="display: none;"><form method="POST" action="/general/ajax_login">
+                                            <div class="row"><span class="plus2">+</span><?php echo CHtml::textField('UserLogin[username]', $value = '', array('defaultvalue' => Yii::t('general', 'Телефон'), 'class' => 'textfield', 'maxlength' => 13)); ?></div>
+                                            <div class="row"><?php echo CHtml::textField('UserLogin[password]', $value = '', array('defaultvalue' => Yii::t('general', 'Пароль'), 'class' => 'textfield')); ?></div>
+                                            <div class="row" style="margin-bottom: 0;"><?php echo CHtml::submitButton(Yii::t('general', 'Войти')); ?>&nbsp;&nbsp;&nbsp;&nbsp;<a class="needpass ajax" href = "javascript:;"><?= Yii::t('general', 'Забыли пароль?') ?></a></div>
+                                            <div class="errorSummary" style="display: none;"><?= Yii::t('general', 'Неверный телефон<br /> или пароль') ?></div>
+                                        </form></div>
+
+                                    <div id="needpass-form" class="form ext" style="display: none;"><form method="POST" action="/general/ajax_sendpass">
+                                            <div class="row"><span class="plus2">+</span><?php echo CHtml::textField('UserLogin[phone]', $value = '', array('defaultvalue' => Yii::t('general', 'Телефон'), 'class' => 'textfield', 'maxlength' => 13)); ?></div>
+                                            <div class="row" style="margin-bottom: 0;"><?php echo CHtml::submitButton(Yii::t('general', 'Прислать новый пароль'), array('class' => 'sendpass')); ?></div>
+                                            <div class="errorSummary" style="display: none;"><?= Yii::t('general', 'Данный номер телефона не зарегестрирован') ?></div>
+                                            <div class="success" style="display: none;"><?= Yii::t('general', 'Ваш пароль успешно изменен и отправлен через SMS!') ?></div>
+                                        </form></div>
+<?php else: ?>
+                                    <a class="cabinet" href="/<?= $language ?>/general/cabinet"><?= Yii::t('common', 'Личный кабинет') ?></a>&nbsp;&nbsp;&nbsp;
+                                    <a class="logout" href="/user/logout"><?= Yii::t('common', 'Выйти') ?></a>
+<?php endif; ?>
+                            </div>
+
+<?php if (Yii::app()->user->isGuest): ?>
+
+                            <?php endif; ?>
+
+                            <?php
+                            switch ($current_service) {
+                                case 1:
+                                    print '<div class="phone_small">8 800 55 05 155<div class="text">' . Yii::t('main', "Телефон горячей линии") . '</div></div>';
+                                    print '<div class="poput">' . Yii::t('poputchik', "Попутчик") . '</div>';
+                                    break;
+                                case 2:
+                                    print '<div class="phone_small">8 800 55 05 155<div class="text">' . Yii::t('main', "Телефон горячей линии") . '</div></div>';
+                                    print '<div class="lffd">' . Yii::t('lostfound', "Бюро находок") . '</div>';   
+                                    break; 
+                                case 3:
+                                    print '<div class="phone_small">8 800 55 05 155<div class="text">' . Yii::t('main', "Телефон горячей линии") . '</div></div>';
+                                    print '<div class="hsfd">' . Yii::t('hotelservice', "Ночлег") . '</div>';
+                                    break;
+                                case 4:
+                                    print '<div class="phone_small">8 800 55 05 155<div class="text">' . Yii::t('main', "Телефон горячей линии") . '</div></div>';
+                                    print '<div class="ltfd">' . Yii::t('hotelservice', "Непотеряйка") . '</div>';
+                                    break;
+                                default:
+                                    print '<div class="phone">8 800 55 05 155<div class="text">' . Yii::t('main', "Телефон горячей линии") . '</div></div>';
+                                    break;
+                            }
+                            ?>
+
+                        </div>
+                    </div><!-- header-wrapper -->
+
+                    <div id="content-wrapper">
+
+						<?php if (Yii::app()->user->hasFlash('ifindmessage')): ?>
+													<div class="message">
+														<div class="flash-success">
+													<?php echo Yii::app()->user->getFlash('ifindmessage'); ?>
+														</div>
+													</div>
+														<?php endif; ?>
+						<?php
+						if (!empty($this->breadcrumbs)) {
+							?>
+													<div class="breadcrumb">
+													<?php
+													$this->widget('zii.widgets.CBreadcrumbs', array(
+														'links' => $this->breadcrumbs,
+														//'homeLink' => CHtml::link('Главная', array('/')),
+														'separator' => ' / ',
+														'htmlOptions' => array(
+															'class' => 'breadcrumbs'
+														)
+													));
+													?>
+													</div><!-- breadcrumb -->
+													<? } ?>
+
+						<?php echo $content; ?>
+				
+						
+					</div>
+
+                </div></div>
+	<div id="review"> 
+							<div class='smail' id="frame1">
+								<div id="quest1"><?= Yii::t('main', "Помог ли Вам наш сервис?") ?></div>
+								<div class='review1' rel='1' id="review_1"><?= Yii::t('main', "Да") ?></div><!--
+								--><div class='review1' rel='2' id="review_2"><?= Yii::t('main', "Нет") ?></div><!--
+								--><div class='review1' rel='3' id="review_3"><?= Yii::t('main', "Отчасти") ?></div>
+							</div> 
+							<div class='smail' id="frame2" style="display:none;">
+								<div id="quest2"><?= Yii::t('main', "Поделитесь с нами вашим пожеланием") ?></div>							
+								<textarea id="review-text" name='review-text' maxlength="400" ></textarea><br>
+								<div class='review2'  rel='4' id="review_4"><?= Yii::t('main', "Отправить") ?></div><!--
+								--><div class='review2'  rel='5' id="review_5"><?= Yii::t('main', "Нет спасибо") ?></div>
+								
+							</div> 
+							<div id="frame3" style="display:none;">
+								<div id="quest3"><?= Yii::t('main', "Спасибо! Благодаря Вам сервис станет лучше.") ?></div>						
+							</div> 
+							<div id="frame4" style="display:none;">
+								<div id="quest4"><?= Yii::t('main', "Извините, ошибка! Попробуйте еще раз позже.") ?></div>						
+							</div> 
+						</div>
+            <div id="footer-wrapper">
+					
+			
+			<div id="footer">
+		
+                    <div class="logo"><span >© 2014</span>
+                        <div class="text"><?= Yii::t('main', "Единая информационная служба") ?></div>
+                    </div>
+                    <div id="menu_wrapper">
+<?php
+
+switch ($domain) {
+    case "poputchik":
+
+        $this->widget('zii.widgets.CMenu', array(
+            'items' => array(
+                //array('label' => 'О компании ', 'url' => array('/about')),
+                array('label' => 'О сервисе', 'url' => array('/o-servise'), 'linkOptions' => array('title' => 'О сервисе')),
+                //array('label' => 'Пользовательское соглашение', 'url' => array('/terms')),
+                array('label' => 'Правила поведения', 'url' => array('/rules'), 'linkOptions' => array('title' => 'Правила поведения')),
+            ),
+        ));
+
+
+        $this->widget('zii.widgets.CMenu', array(
+            'items' => array(
+                //array('label' => 'Полезные советы', 'url' => array('/poleznye-sovety')),
+                array('label' => 'Часто задаваемые вопросы', 'url' => array('/faq'), 'linkOptions' => array('title' => 'Часто задаваемые вопросы')),
+                array('label' => 'Свяжитесь с нами', 'url' => array('/feedback'), 'linkOptions' => array('title' => 'Свяжитесь с нами')),
+            ),
+        ));
+
+        break;
+    case "buronahodok":
+        $this->widget('zii.widgets.CMenu', array(
+            'items' => array(
+                array('label' => 'Cтатьи и публикации', 'url' => array('/stati-i-publikatsii'), 'linkOptions' => array('title' => 'Cтатьи и публикации')),
+                array('label' => 'Полезные советы и инструкции', 'url' => array('/soveti'), 'linkOptions' => array('title' => 'Полезные советы и инструкции')),
+				array('label' => 'Другие ресурсы', 'url' => array('/other'), 'linkOptions' => array('title' => 'Другие ресурсы')),
+             
+      
+            ),
+        ));
+		$this->widget('zii.widgets.CMenu', array(
+            'items' => array(       
+				array('label' => 'Внимание мошенники!', 'url' => '/vnimanie-moshenniki', 'linkOptions' => array('title' => 'Внимание мошенники!')),	
+                array('label' => 'Свяжитесь с нами', 'url' => array('/feedback'), 'linkOptions' => array('title' => 'Свяжитесь с нами')),
+				array('label' => 'О сервисе', 'url' => array('/o-servise'), 'linkOptions' => array('title' => 'О сервисе')),           
+            ),
+        ));
+
+        break;
+    case "nepoteryaika":
+        $this->widget('zii.widgets.CMenu', array(
+            'items' => array(
+                array('label' => 'Часто задаваемые вопросы', 'url' => array('/LostService/faq'), 'linkOptions' => array('title' => 'Часто задаваемые вопросы')),
+                array('label' => 'Как это работает?', 'url' => array('/LostService/how_its_work'), 'linkOptions' => array('title' => 'Как это работает')),
+            ),
+        ));
+        break;
+    case "nochleg":
+
+        break;
+    default:
+
+        break;
+}
+?>
+
+
+
+
+
+
+                    </div>
+                    <div class="phone">8 800 55 05 155<div class="text"><?= Yii::t('main', "Телефон горячей линии") ?></div></div>
+                </div></div><!-- footer -->
+
+        </div><!-- page -->
+        <!-- Yandex.Metrika counter INFOtoway.ru--><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter25402388 = new Ya.Metrika({id:25402388, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/25402388" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter INFOtoway.ru-->
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter24462377 = new Ya.Metrika({id:24462377,
+                            webvisor:true,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true});
+                    } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript><div><img src="//mc.yandex.ru/watch/24462377" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </body>
+</html>

@@ -1,0 +1,10 @@
+/**
+* @author Denis Baklaev
+* @copyright Copyright &copy; 2014 Aliscom
+*/
+.plupload-file { margin-bottom: 3px; }
+.filelist .plupload-file:last-child  { margin-bottom: 20px; }
+.plupload-file .progress  { border: 1px solid #6E6F71; margin-top: 5px; width: 100px; float: left; }
+.plupload-file .cancel  { width: 14px; height: 14px; margin: 4px 0 0 5px; cursor: pointer; background: url('/images/icons/editdel.gif') no-repeat 0 -15px; float: left; }
+.plupload-file .progress div { background-color: #1B75AF; height: 10px; width: 0px; }
+.plupload-file .error { display: none; }  

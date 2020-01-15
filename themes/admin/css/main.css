@@ -1,0 +1,278 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+}
+
+#page
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid #C9E0ED;
+}
+
+#header
+{
+	margin: 0;
+	padding: 0;
+	border-top: 3px solid #C9E0ED;
+}
+
+#content
+{
+    padding: 20px;
+}
+
+#sidebar
+{
+	padding: 20px 20px 20px 0;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+}
+
+#logo
+{
+	padding: 10px 20px;
+	font-size: 200%;
+}
+
+#mainmenu
+{
+	background:white url(bg.gif) repeat-x left top; position: relative;
+}
+
+#mainmenu ul
+{
+	padding:0 20px;
+	margin:0px;
+	position: relative; height: 28px;
+}
+
+#mainmenu ul li
+{
+	display: block; height: 28px; float: left; overflow: visible; padding: 0;
+}
+
+#mainmenu ul li a
+{
+	color:#ffffff;
+	background-color:transparent;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	line-height: 28px;
+	padding: 0 7px;
+	float: left; display: block;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #6399cd;
+	background-color:#EFF4FA;
+	text-decoration:none;
+}
+
+#mainmenu ul li ul { display: none; position: absolute; top: 100%;
+                    background: #000; color: #fff; height: auto; padding: 0; z-index: 1000;
+}
+#mainmenu ul li ul li { display: block; float: none; padding: 0; height: auto; }
+#mainmenu ul li ul li a { float: none; color: #ccc; padding: 8px 14px; min-width: 100px; }
+#mainmenu ul li ul li.active a, #mainmenu ul li ul li a:hover { color: #fff; background-color: #777; }
+#mainmenu ul li:hover > ul { display: block; }
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+div.breadcrumbs
+{
+	font-size: 0.9em;
+	padding: 5px 20px;
+}
+
+div.breadcrumbs span
+{
+	font-weight: bold;
+}
+
+div.search-form
+{
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
+.portlet
+{
+
+}
+
+.portlet-decoration
+{
+	padding: 3px 8px;
+	background: #B7D6E7;
+	border-left: 5px solid #6FACCF;
+}
+
+.portlet-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #298dcd;
+}
+
+.portlet-content
+{
+	font-size:0.9em;
+	margin: 0 0 15px 0;
+	padding: 5px 8px;
+	background:#EFFDFF;
+}
+
+.portlet-content ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li
+{
+	padding: 2px 0 4px 0px;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li
+{
+	padding-bottom: 2px;
+}
+
+.operations li a
+{
+	font: bold 12px Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.operations li a:visited
+{
+	color: #0066A4;
+}
+
+.operations li a:hover
+{
+	background: #80CFFF;
+}
+
+/*Ajax Error*/
+#ajax-error-message { position: fixed; display: none; z-index: 88777; top: 1px; left: 1px; padding: 2px; background-color: #ffd4d4; border: 1px solid #cc0000; }
+
+/*Autocomplete*/
+.ui-autocomplete {
+	max-height: 300px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+	height: 300px;
+}
+/*CLEARFIX*/
+.block-clearfix {
+clear: both;
+}
+.container-clearfix {
+display: table; /* эмулируем таблицу (второй вариант это использование float, но тогда немного больше проблем с IE) */
+width: 100%; /* это нужно для IE */
+line-height: 1px;
+}
+* html .container-clearfix {
+margin-left: -3px; /* исправляем небольшой косяк в IE6 */
+}
+
+/*Маршруты*/
+.route-settlements-table tr:first-child .up-button a { display: none; }
+.route-settlements-table tr:last-child .down-button a { display: none; }
+
+/*Форма заявки попутчик*/
+#PoputchikOrder_transit, #PoputchikOrder_reverse,
+#days_of_week-wrapper input, #days_of_week-wrapper label, #days_of_month-wrapper input, #days_of_month-wrapper label { float: left; margin-right: 5px; }
+#days_of_month label { width: 20px; }

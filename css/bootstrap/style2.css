@@ -1,0 +1,1488 @@
+﻿body{
+    min-width: 280px;
+}
+.offerTrip{
+    text-align: center;
+    font-family: Roboto-Regular;
+    font-size: 29px;
+    color: #58788c;
+    margin-bottom: 20px;
+
+}
+.offerTrip img, .dataTrip img{
+    margin-top: 45px;
+    width: 100%;
+}
+.change-arrow img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+}
+.change-arrow {
+    padding-top: 15px;
+}
+.buttonResume{
+    text-align: center;
+    
+}
+.buttonResume a{
+    display: block;
+    width: 274px;
+    height: 59px;
+    background-color: #7fba00;
+    border-radius: 3px;
+    font-family: Roboto-Medium;
+    font-size: 29px;
+    margin: 0 auto;
+    line-height: 59px;
+    text-decoration: none;
+}
+
+.buttonResume a:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: #3AA9E0;
+
+}
+.button{
+    font-size: 14px;
+    cursor: pointer;
+    /*border-radius: 3px;*/
+    height: 34px;
+    border: none;
+    background-color: #3aa9e0;
+    border: none;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 34px;
+    padding: 0 10px;
+    margin: 5px 0;
+    font-family: Roboto-Medium;
+}
+.button-large {
+    width: 274px;
+    height: 59px;
+    line-height: 59px;
+    font-size: 29px;
+}
+.button:hover{
+    background-color: #2980b9 ; /* #7fba00*/
+}
+.button-green{
+     background-color: #7fba00;
+ }
+.button-green:hover{
+    color: #fff;
+    background-color: #3AA9E0;
+}
+.pricePlace span{
+     color: #3aa9e0;
+     font-size: 24px;
+     font-family: Roboto-Regular;
+    margin-right: 5px;
+ }
+.pricePlace{
+    color: #3aa9e0;
+    font-size: 24px;
+    font-family: Roboto-Light;
+    float: left;
+}
+.rangeSlider a{
+    display: inline-block;
+    width: 68px;
+}
+.rangeSlider a input{
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px dashed #3AA9E0;
+    display: inline-block;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+}
+.rangeSlider a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+.firstRangeSlider .sbHolder{
+    border: none!important;
+
+    color: #3aa9e0 !important;
+    font-size: 24px;
+    font-family: Roboto-Light;
+}
+.firstRangeSlider .sbSelector{
+    width: auto !important;
+
+}
+.firstRangeSlider .sbSelector:link, .sbSelector:visited, .sbSelector:hover {
+    color: #3aa9e0 !important;
+    outline: none;
+    text-decoration: none;
+    height: 35px;
+    /*line-height: 33px;*/
+    display: inline-block;
+}
+.firstRangeSlider  .sbToggle {
+    background: url('/images/offerDriver/arro-mini-down-active.png') no-repeat;
+    right: 20px;
+    top: 15px;
+    height: 14px;
+    width: 20px;
+    border: none !important;
+
+}
+.firstRangeSlider.freePlaces{
+    margin-top: 60px;
+}
+.freePlaces .sbToggle{
+    right: 40px;
+}
+.firstRangeSlider.freePlaces .sbHolder ul{
+    width: 54px !important;
+}
+.firstRangeSlider .sbHolder ul {
+    width: 150px !important;
+    text-align: center;
+    top: 40px !important;
+    border: 1px solid #BDC7CB;
+    background: #ECF2F5;
+    z-index: 3;
+
+}
+.firstRangeSlider .sbHolder ul a{
+    border: none;
+    width: 100%;
+}
+.firstRangeSlider .sbOptions li a:hover {
+    background: #3AA9E0;
+    color: #fff;
+}
+#type_auto-row .radio {
+    margin-left: 30px;
+    padding-top: 80px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+#type_auto-row  .ta-1{
+    display: inline-block;
+    background: url(/images/offerDriver/car-noactive.png) no-repeat 50% 25px;
+    width: 70px;
+
+}
+#type_auto-row  .ta-2{
+    display: inline-block;
+    background: url(/images/offerDriver/bus-noactive.png) no-repeat 50% 7px;
+    width: 70px;
+
+}
+
+#type_auto-row  .ta-3 {
+    display: inline-block;
+    background: url(/images/offerDriver/cargo-noactive.png) no-repeat 50% 0;
+    width: 70px;
+
+}
+#type_auto-row .auto-type-item{
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+    cursor: pointer;
+}
+#type_auto-row .auto-type-item label:hover{
+    color: #3aa9e0;
+}
+#type_auto-row .auto-type{
+    text-align: justify;
+    padding-left: 0;
+}
+#type_auto-row .auto-type-item:last-child{
+
+    margin-right: 0;
+}
+#type_auto-row .auto-type-item input{
+    display: none;
+}
+#type_auto-row .auto-type-item label{
+
+    padding-top: 50px;
+    margin-top: 0;
+    color: #58788c;
+    font-size: 16px;
+    font-family: Roboto-Regular;
+    margin-bottom: 0x;
+    display: inline-block;
+    width: 100%;
+}
+
+#type_auto-row label{
+    background: #ecf2f5;
+    width: 378px;
+    height: 71px;
+    border-radius: 4px;
+    font-size: 28px;
+    font-family: "Roboto-Regular";
+    color: #3aa9e0;
+    line-height: 71px;
+    font-weight: normal;
+
+}
+a.radio {
+    text-align: center;
+    font-size: 12px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #414042;
+}
+#type_auto-row label{
+    cursor: pointer;
+}
+#type_auto-row input:checked + .ta-1, #type_auto-row .ta-1:hover {
+    background-image: url(/images/offerDriver/car-active.png);
+}
+#type_auto-row input:checked + .ta-2, #type_auto-row .ta-2:hover {
+    background-image: url(/images/offerDriver/bus-active.png);
+    background-position: 50% 7px;
+}
+#type_auto-row input:checked + .ta-3, #type_auto-row .ta-3:hover {
+    background-image: url(/images/offerDriver/cargo-active.png);
+}
+.btn-Param, .btn-Param:hover{
+    font-family: Roboto-Light;
+    font-size: 23px;
+    color: #3aa9e0 !important;
+    background-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top: 40px;
+    padding-left: 0;
+}
+#type_auto-row .brand .sbHolder a,#type_auto-row .model .sbHolder a{
+    font-size: 24px;
+    font-family: "Roboto-Light", sans-serif;
+    color: #3aa9e0;
+    display: block;
+    height: inherit !important;
+    line-height: 43px;
+    padding-left: 5px;
+    text-align: center;
+}
+.btn-Param img{
+    margin-left: 15px;
+}
+#additionalParameters .additionalParam{
+    background-color: #ecf2f5;
+    width: 100%;
+    max-width: 378px;
+    min-height: 71px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: "Roboto-Regular";
+    color: #3aa9e0;
+    line-height: 71px;
+}
+#additionalParameters > .row{
+  margin: 0;
+}
+
+.additionalParam .sbHolder {
+    border: none!important;
+    height: auto;
+    color: #3aa9e0 !important;
+    font-size: 24px;
+    font-family: Roboto-Light;
+}
+.additionalParam .sbSelector:link{
+    color: #3aa9e0 !important;
+    outline: none;
+    text-decoration: none;
+    height: 35px;
+    display: inline;
+}
+.additionalParam .sbSelector{
+    width: 100% !important;
+}
+.sbToggle{
+    outline: none !important;
+}
+.param-baggage-three .sbHolder .sbSelector{
+    font-size: 0.6em !important;
+    display: inline-block;
+    height: auto;
+    text-align: center;
+}
+.param-baggage-two .sbHolder .sbSelector{
+    font-size: 0.7em !important;
+    display: inline-block;
+    height: auto;
+    text-align: center;
+}
+
+.baggage{
+    display: inline-block;
+}
+.param-baggage{
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+    margin-top: 18px;
+}
+.additionalParam .sbToggle {
+    background: url(/images/offerDriver/arro-mini-down-active.png) no-repeat;
+    right: 60px;
+    top: 15px;
+    height: 25px;
+    width: 35px;
+    border: none !important;
+}
+.additionalParam .param-baggage{
+    margin-left: 0px;
+}
+.additionalParam .sbHolder ul {
+    width: 150px !important;
+    text-align: center;
+    top: 40px !important;
+    border: 1px solid #BDC7CB;
+    background: #ECF2F5;
+}
+.additionalParam .sbOptions li a:hover {
+    background: #3AA9E0;
+    color: #fff;
+}
+.additionalParam .sbOptions a{
+    height: auto !important;
+    display: block;
+    line-height: normal;
+    border: none;
+}
+
+.additionalParam a {
+    text-decoration: none;
+    border-bottom: 1px dashed #3AA9E0;
+    display: inline-block;
+    color: inherit;
+    cursor: pointer;
+}
+.position_pos{
+    max-width: 692px;
+}
+.offerTrip_input{
+    margin: 0 auto;
+}
+.offerTrip_input input, .intermediate input, .dateDeparture input, .dateReverseDeparture input {
+    border: 1px solid #bdc3c7;
+    padding: 0 5px;
+    border-radius: 5px;
+
+}
+.time-moveOut{
+    margin-top: 140px;
+}
+.intermediate ul{
+    color: #3aa9e0;
+    font-size: 19px;
+    list-style-position: inside;
+    font-family: Roboto-Light;
+}
+.intermediate ul li{
+    cursor: ns-resize;
+    padding-right: 28px;
+    max-width: 330px;
+}
+.intermediate ul li a{
+    color: #3aa9e0;
+    font-weight: bold;
+}
+.label-block #amount{
+    border: 0;
+    color: #f6931f;
+    font-weight: bold;
+}
+.label-block #amount-second{
+    border: 0;
+    color: #f6931f;
+    font-weight: bold;
+}
+.searchDirections{
+    max-width: 370px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.offerTrip_input .change-arrow {
+     padding-top: 0;
+}
+.offerTrip_input .swap{
+    width: 54px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 14px 0 12px;
+}
+.route_map span{
+    color: #58788c;
+    font-size: 19px;
+    font-family: Roboto-Light;
+}
+.intermediate input{
+    border: 1px dotted #3aa9e0;
+    max-width: 371px;
+    font-size: 24px;
+}
+
+#plus_sity{
+    font-size: 39px;
+    color: #3AA9E0;
+    font-family: "Roboto-Light", sans-serif;
+    padding-left: 55px;
+    background: #ecf2f5 url(/images/offerDriver/flag-white.png) no-repeat 15px 50%;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 48px;
+}
+.add_sity_plus{
+    position: relative;
+    max-width: 371px;
+}
+
+.add_sity_plus .del-label{
+    background: url(/images/offerDriver/plus.png) no-repeat;
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.c-poputchikOrder.r-addAdvert .add_sity_plus .del-label{
+    background: url(/images/offerDriver/plus.png) no-repeat;
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+.c-poputchikOrder.r-addAdvert #ui-datepicker-div {
+    margin: 0;
+    padding: 0;
+
+}
+.c-poputchikOrder.r-addAdvert #ui-datepicker-div .ui-datepicker-calendar{
+    margin: 0;
+}
+.c-poputchikOrder.r-addAdvert .add_sity_plus .del-label:hover{
+    background: url(/images/offerDriver/plus.png) no-repeat 0 0;
+    border: none;
+}
+.route_map{
+    max-width: 401px;
+    float: right;
+    text-align: left;
+
+}
+.route_map img{
+    margin-top: 0;
+}
+.datepicker{
+    width: 100%;
+    max-width: 368px;
+    height: 48px;
+    background: #ECF2F5 url(/images/calendar-mini-bg.png) no-repeat 95% 50%;
+    padding: 0 40px 0 10px;
+    font-size: 24px;
+    font-family: "Roboto-Light", sans-serif;
+    color: #3aa9e0;
+}
+.dateDeparture p, .dateReverseDeparture p{
+    font-family: Roboto-Medium;
+    font-size: 22px;
+    color: #58788c;
+}
+.dateReverseDeparture{
+    float: right;
+    /*max-width: 404px;*/
+}
+.time-hour, .time-min{
+    width: 54px;
+    height: 48px;
+    background: #ECF2F5;
+    font-size: 24px;
+    font-family: "Roboto-Light", sans-serif;
+    color: #3aa9e0;
+    padding: 0 !important;
+    text-align: center;
+}
+.dateReverseDeparture .datepicker, .dateDeparture .datepicker{
+    max-width: 236px !important;
+    margin-right: 5px;
+}
+.dateReverseDeparture .colon, .dateDeparture .colon{
+    color: #3aa9e0;
+    font-size: 28px;
+    font-weight: bold;
+}
+.TimingAndDates{
+    margin-top: 35px;
+}
+.placeButtonResume{
+    margin-top: 50px;
+}
+.slider.slider-horizontal{
+    width: 335px;
+}
+.slider.slider-horizontal .slider-track{
+    height: 3px;
+    background-color: #b3c1c7;
+
+}
+
+.rangeSlider b.top{
+    position: relative;
+    top: -20px;
+    font-size: 24px;
+    color: #3aa9e0;
+    height: 45px;
+    width: 16px;
+    background: url("/images/circle.png")  0 100% no-repeat;
+    display: inline-block;
+    z-index: 1;
+
+}
+.rangeSlider b.top-left,.rangeSlider b.bottom-left {
+    float: left;
+    left: 9px;
+}
+.rangeSlider b.top-right, .rangeSlider b.bottom-right{
+    right: 11px;
+}
+.sbOptions li {
+    padding: 6px;
+}
+.rangeSlider .tooltip.tooltip-main{
+    display: none;
+}
+.rangeSlider b.bottom{
+    position: relative;
+
+}
+.rangeSlider b.bottom{
+    position: relative;
+    top: -20px;
+    font-size: 24px;
+    color: #3aa9e0;
+    height: 45px;
+    width: 16px;
+    background: url("/images/circle.png")  0 100% no-repeat;
+    display: inline-block;
+    z-index: 1;
+}
+
+.typeAuto{
+    max-width: 408px;
+    padding-right: 0;
+    /*padding-left: 40px;*/
+}
+.typeAuto .brand .sbHolder, .typeAuto .model .sbHolder{
+    border: 1px solid #bdc3c7;
+    background: #ECF2F5;
+    width: 174px;
+    height: 43px !important;
+
+}
+
+.typeAuto .brand .sbToggle, .typeAuto .model .sbToggle{
+    background: url('/images/offerDriver/arro-mini-down-active.png') no-repeat;
+    top: 14px;
+    height: 14px !important;
+}
+.typeAuto .brand .sbHolder ul, .typeAuto .model .sbHolder ul{
+    width: 174px !important;
+    text-align: center;
+    top: 40px !important;
+    border: 1px solid #BDC7CB;
+    background: #ECF2F5;
+}
+#type_auto-row .sbOptions li a:hover {
+    background: #3AA9E0;
+    color: #fff;
+}
+#type_auto-row .sbOptions li{
+    padding: 0;
+    overflow: hidden;
+}
+.typeAuto .brand .sbOptions a, .typeAuto .model .sbOptions a{
+    border-bottom: none;
+}
+#type_auto-row{
+    text-align: center;
+}
+#type_auto-row a{
+    color: #58788c;
+    font-size: 16px;
+    font-family: Roboto-Regular;
+
+}
+.dateDeparture >p+div{
+    display: inline;
+}
+.valid_until p{
+    display: inline-block;
+}
+.valid_until{
+    margin: 0 auto;
+    max-width: 720px;
+}
+.dateDeparture.valid_until .wrapp-time{
+    width: 375px;
+}
+#date_from3 {
+    width: 100%;
+    max-width: 224px;
+    height: 48px;
+    background: #ECF2F5 url(/images/calendar-mini-bg.png) no-repeat 95% 50%;
+    padding: 0 40px 0 10px;
+    font-size: 24px;
+    font-family: "Roboto-Light", sans-serif;
+    color: #3aa9e0;
+}
+.checkbox.confirmRight input[type="checkbox"]{
+    display:none;
+}
+.checkbox.confirmRight input[type="checkbox"] + label{
+    font: 18px bold;
+    color: #444;
+    cursor: pointer;
+}
+.checkbox.confirmRight input[type="checkbox"] + label::before{
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url(/images/offerDriver/sprites.png) !important;
+    background-repeat: no-repeat;
+}
+.checkbox.confirmRight input[type="checkbox"]:checked + label::before { /* активный выделеный чекбокс*/
+    background-position: 22px;
+}
+.checkbox.confirmRight input[type="checkbox"] + label::before { /* пустой чекбокс*/
+    width: 22px;
+    height: 20px;
+    background: #fff;
+}
+.checkbox.confirmRight input[type="checkbox"]:checked:disabled + label::before { /*не активный выделеный чекбокс*/
+    opacity: 0.6;
+}
+.checkbox.confirmRight input[type="checkbox"]:disabled + label::before {/*не активный пустой чекбокс*/
+    opacity: 0.6;
+}
+.checkbox.confirmRight > label{
+    font-size: 19px !important;
+    font-family: Roboto-Regular !important;
+    color: #58788c !important;
+
+}
+.confirmRight{
+    /*width: 480px;*/
+    width: 100%;
+    margin: 45px auto 0;
+}
+.form_human_data{
+    font-size: 21px;
+    color: #3AA9E0;
+    font-family: "Roboto-Light", sans-serif;
+    padding-left: 15px;
+    background: #ecf2f5;
+    margin-bottom: 13px;
+    width: 100%;
+    height: 41px;
+    outline: none;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+.form_human_data:focus,.form_human textarea:focus{
+    border: 1px solid #fd7d65;
+}
+.form_human textarea{
+    max-width: 310px;
+    height: 150px;
+    background: #ecf2f5;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    color: #3AA9E0;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 21px;
+    resize: none;
+}
+.warning{
+    color: #fd7d65;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+}
+#additionalParameters .additionalParam.deviation{
+    line-height: 34px;
+    padding-right: 0px;
+}
+#additionalParameters .additionalParam.deviation span{
+    text-align: right;
+    display: inline-block;
+    width: 215px;
+    font-size: 25px;
+    line-height: 25px;
+    margin-top: 12px;
+
+}
+.nonToggle .sbToggle{
+    display: none;
+}
+.uploader{
+    width: 178px;
+    height: 150px;
+    display: inline-block;
+    border: 2px dotted #3aa9e0;
+    border-radius: 5px;
+    background: #ecf2f5;
+    font-family: Roboto-Light;
+    font-size: 21px;
+
+    outline: none;
+}
+.uploader span{
+    margin: 0 auto;
+    display: block;
+    width: 135px;
+    text-align: center;
+    line-height: 26px;
+}
+.uploader .default-proposition{
+    padding-top: 35px;
+}
+
+.uploader .default-proposition img{
+    margin: 0 auto;
+    width: 30px;
+    display: block;
+    margin-top: 5px;
+
+}
+
+.uploader:hover, .uploader:focus{
+    text-decoration: none;
+}
+.form_human .comments-wrapper, .form_human .comments-wrapper + div{
+    padding-left: 0;
+}
+.number-step-header a{
+    color: #58788c;
+    background: #ffffff;
+    border-radius: 50%;
+    display: block;
+    height: 57px;
+    width: 57px;
+    text-decoration: none;
+    font-family: Roboto-Medium;
+    font-size: 34px;
+    line-height: 54px;
+    margin: 0 auto;
+    border: 2px solid #fd7d65;
+}
+.number-step-header span{
+    font-family: Roboto-Medium;
+    font-size: 22px;
+    color: #58788c;
+}
+.number-step-header a.active{
+    background: #7fba00;
+    border: none;
+    color: #fff;
+    height: 57px;
+    width: 57px;
+    line-height: 57px;
+
+}
+.step-circle{
+    display: block;
+}
+.itw-multistep-form .step { display:none; }
+.number-step-header hr {
+    height: 3px;
+    width: 70%;
+    background: #b3c1c7;
+    position: absolute;
+    z-index: -1;
+    right: 15%;
+    /* width: 600px; */
+    top: 6px;
+}
+.number-step-header a:focus{
+    outline: none;
+}
+button.navbar-toggle{
+   /*margin-top: 20px;*/
+}
+.hidden{
+    display: none;
+}
+
+.rangeSlider .customSelect + .sbSelector{
+    position: static;
+
+}
+.firstRangeSlider .sbSelector{
+    line-height: 35px;
+    width: 200px;
+    border-bottom: 1px dashed #3AA9E0;
+}
+.firstRangeSlider.freePlaces .sbSelector{
+    left: 14px;
+}
+.rangeSlider .freePlaces .sbHolder{
+    width: 100px !important;
+}
+.rangeSlider .customSelect + .sbHolder{
+
+    display: inline-block;
+    float: none;
+}
+#additionalParameters .sbHolder{
+    float: none !important;
+
+    width: 130px !important;
+    line-height: 35px;
+}
+.additionalParam .sbToggle{
+    width: 25px;
+    right: -30px;
+}
+.additionalParam .sbSelector{
+
+    position: static;
+    display: inline-block;
+}
+.step-circle{
+    position: relative;
+}
+.step-circle.step-circle-1{
+    top: 0;
+}
+.step-circle.step-circle-2 {
+    top: 25%;
+}
+.step-circle.step-circle-3{
+    top: 50%;
+}
+
+.c-poputchikOrder.r-addAdvert #content{
+    position: relative;
+}
+.number-step-header{
+    position: absolute;
+    /*left: -92px;*/
+    left: -83px;
+    height: 100%;
+}
+.linePaginator{
+    border-left: 3px solid #cccccc;
+    position: absolute;
+    height: 55%;
+    right: 28px;
+    z-index: -1;
+    top: 0;
+}
+.linePaginator2{
+    border-left: 3px solid #cccccc;
+    position: absolute;
+    height: 52%;
+    right: 28px;
+    z-index: -1;
+
+}
+.c-poputchikOrder.r-addAdvert .step h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.c-poputchikOrder.r-addAdvert #ui-datepicker-div .ui-datepicker-header{
+    width: 100%;
+    margin: 0;
+}
+#ui-datepicker-div .ui-datepicker-header{
+    position: relative;
+    padding: .2em 0 10px;
+    margin: 0 auto;
+    width: 95% ;
+    background: #fff;
+    border: none;
+}
+#ui-datepicker-div{
+    font-family: ROBOTO-REGULAR;
+    background: #ecf2f5;
+
+
+}
+.c-poputchikOrder.r-addAdvert .ui-datepicker-calendar{
+    background: #79878d;
+}
+#ui-datepicker-div .ui-datepicker-group .ui-datepicker-calendar{
+    background: #79878d;
+
+}
+.c-poputchikOrder.r-addAdvert #ui-datepicker-div .ui-datepicker-week-end,.c-poputchikOrder.r-addAdvert #ui-datepicker-div .ui-datepicker-week-end .ui-state-default ,#ui-datepicker-div .ui-datepicker-group .ui-datepicker-week-end,#ui-datepicker-div .ui-datepicker-group .ui-datepicker-week-end .ui-state-default {
+    color: #f0b39a;
+    font-weight: normal;
+}
+#ui-datepicker-div th, .c-poputchikOrder.r-addAdvert #ui-datepicker-div th{
+    color: #fff;
+    font-weight: normal;
+}
+#ui-datepicker-div .ui-datepicker-group .ui-state-default, .c-poputchikOrder.r-addAdvert .ui-datepicker-calendar .ui-state-default{
+    color: #fff;
+    background: transparent;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: normal;
+}
+#ui-datepicker-div .ui-datepicker-group .ui-state-default.ui-state-active, #ui-datepicker-div .ui-state-default:hover{
+    background: #7fb1ce;
+    color: #fff !important;
+}
+#ui-datepicker-div .ui-datepicker-title{
+    color: #96a3a8;
+    font-size: 22px;
+    font-weight: normal;
+}
+#ui-datepicker-div .ui-datepicker-prev{
+
+    width: 24px;
+    height: 38px;
+}
+#ui-datepicker-div .ui-datepicker-prev .ui-icon{
+    background: url("/images/arrow-left-cal.png") no-repeat;
+    width: 24px;
+    height: 38px;
+    position: absolute;
+     left: 1px;
+     margin-left: 0;
+    top: 5px;
+    margin-top: 0;
+    cursor: pointer;
+}
+#ui-datepicker-div .ui-datepicker-prev:hover{
+    background: transparent;
+    width: 24px;
+    height: 38px;
+    border: none;
+    top: 2px !important;
+    left: 2px;
+
+}
+#ui-datepicker-div .ui-datepicker-next{
+    width: 24px;
+    height: 38px;
+}
+#ui-datepicker-div .ui-datepicker-next .ui-icon{
+    background: url("/images/arrow-right-cal.png") no-repeat;
+    width: 24px;
+    height: 38px;
+    position: absolute;
+    right: 5px;
+    margin-left: 0;
+    top: 5px;
+    margin-top: 0;
+    cursor: pointer;
+    left: 0 !important;
+    background-position: 0 0;
+}
+#ui-datepicker-div .ui-datepicker-next:hover{
+    background: transparent;
+    width: 24px;
+    height: 38px;
+    border: none;
+    top: 2px !important;
+    right: 2px !important;
+    background-position: 0 0;
+
+}
+.TimingAndDates .wrapp-time,.TimingAndDates .dateDeparture .wrapp-time  {
+    display: inline-block;
+    width: 100%;
+}
+.dateDeparture .wrapp-time{
+    display: inline-block;
+    width: auto;
+}
+#menu_wrapper a{
+    color: #fff;
+}
+.center-menu-footer{
+    display: none;
+}
+#footer .wrapp-foot{
+    padding-top: 10px;
+}
+
+#slider-for-price .ui-slider-handle, #slider-for-place-quantity .ui-slider-handle{
+    background: #ff6666;
+    opacity: 0.8;
+    border: none;
+    border-radius: 10px;
+    outline-style: none;
+}
+#slider-for-price, #slider-for-place-quantity {
+    margin-left: 0.6em;
+    position: relative;
+    max-width: 365px;
+    height: 3px;
+    border: none;
+    background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #f9f9f9 100%);
+    background-image: linear-gradient(to bottom, #f5f5f5 0%, #f9f9f9 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+}
+#slider-for-price .ui-widget-header, #slider-for-place-quantity .ui-widget-header{
+    background: #B3C1C7;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.6em !important;
+}
+.rangeSlider{
+
+    padding: 0;
+}
+.label-block {
+    max-width: 380px;
+   margin-bottom: 10px;
+    font-size: 24px;
+    color: #3aa9e0;
+    margin-top: 25px;
+}
+.label-block label.min, .label-block label.max{
+    margin-bottom: 10px;
+}
+.label-block label{
+    float: left;
+}
+.label-block label.max{
+    float: right;
+}
+.label-block input{
+    float: right;
+    text-align: right;
+    font-size: 24px;
+    color: #3aa9e0 !important;
+}
+#slider-for-price .left-circle, #slider-for-place-quantity .left-circle{
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    z-index: 2;
+}
+#slider-for-price .right-circle, #slider-for-place-quantity .right-circle{
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    z-index: 2;
+}
+.offerTrip-Passenger .linePaginator{
+     height: 31% !important;
+ }
+.offerTrip-Passenger .linePaginator2{
+    height: 20% !important;
+}
+.item-row .photo{
+    position: relative;
+}
+.item-row .photo .status-client {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    bottom: -1px;
+    right: -1px;
+    border: 1px solid #BDC7CB;
+}
+
+#hotel-service-form .row label{
+    display: inline-block;
+}
+#hotel-service-form .row .inner{
+    display: inline-block;
+}
+.c-hotelService.r-create div.form label,.c-hotelService.r-create div.form span.label {
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.c-hotelService.r-create #hotel-service-form{
+    margin: 0 auto;
+}
+.c-hotelService.r-create #hotel-service-form .choice-block a{
+    display:  inline-table;;
+}
+div.form textarea {
+    border: 1px solid #5fc0e9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+}
+#hotel-service-form .row-6 .row-square label, #hotel-service-form .row-6 .row-rate label {
+    display: inline-block;
+}
+div.form .row {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+#rate {
+    display: inline-block;
+}
+
+#hotel-service-form .row-phone input {
+    width: 150px;
+}
+#hotel-service-form .row-4 textarea, #hotel-service-form .row-5 textarea {
+    width: 410px;
+    resize: none;
+}
+#hotel-service-form .row-4 label, #hotel-service-form .row-5 label {
+    height: 50px;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+#hotel-service-form .row label {
+    width: 180px;
+    text-align: right;
+}
+#hotel-service-form .row-phone label {
+    width: 60px;
+}
+#hotel-service-form .price {
+    padding: 20px 20px 20px 20px;
+    margin-top: 30px;
+}
+div.form fieldset {
+    border: 1px solid #d2d3d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+    padding: 20px 20px 20px 10px;
+    position: relative;
+}
+
+div.form fieldset {
+    border: 1px solid #DDD;
+    padding: 10px;
+    margin: 20px 0 10px 0;
+    -moz-border-radius: 7px;
+}
+#hotel-service-form .ref {
+    color: #919395;
+    font-size: 12px;
+    font-style: italic;
+    position: absolute;
+    right: 0;
+    top: -17px;
+}
+div.legend {
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    padding: 0 11px;
+    border: 1px solid #d2d3d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 23px;
+    margin: 0;
+    background-color: #fff;
+}
+.c-hotelService.r-create div.form .row .inner {
+    position: relative;
+    float: left;
+}
+#hotel-service-form .row.buttons.phone input[type=submit] {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: left;
+}
+input[type="button"], input[type="submit"] {
+    width: 95px;
+    height: 25px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3ea9e0;
+    margin: 0 auto;
+}
+div.error{
+    background: transparent !important;
+    border: none !important;
+}
+div.error input{
+    border: 1px solid #EBCCD1 !important;
+    background: #F2DEDE !important;
+    color: #A94442;
+}
+.error{
+    border: 1px solid #EBCCD1 !important;
+    background: #F2DEDE !important;
+    color: #A94442;
+
+}
+.validate-error-i_approve{
+    text-align: center;
+}
+.validate-error{
+    color: red;
+}
+.validate-el.CityAc.error{
+    background: #F2DEDE url(/images/icon_blop_map.png) no-repeat 15px 50% !important;
+    background-size: 23px !important;
+}
+div.form.ext .errorMessage {
+    color: #fff;
+    font-size: 10px;
+    line-height: 30px;
+    background: url('/images/err-bg.png') 50% 0;
+    padding: 0 7px 8px;
+    position: absolute;
+    z-index: 100;
+    left: 10px;
+    top: -38px;
+    white-space: nowrap;
+}
+div.form span.required {
+    color: red;
+}
+#hotel-service-form .hint-1 {
+    position: absolute;
+    left: 35px;
+    color: #221f1f!important;
+    font-weight: 700;
+    top: 31px;
+}
+div.form .hint {
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+#hotel-service-form #HotelService_price_from, #lf-orders-filter #price_from {
+    float: left;
+}
+#slider-range {
+    height: 10px;
+    margin-bottom: 0;
+    width: 240px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 24px;
+}
+.map-block .route_map #map_canvas{
+    height: 391px;
+}
+
+.c-poputchikOrder.r-addAdvert .map-block .route_map{
+    margin-top: 25px;
+}
+.c-poputchikOrder.r-addAdvert .map-block .intermediate{
+    margin-top: 50px;
+}
+.step2-row{
+    margin: 0 auto;
+}
+#additionalParameters .nonToggle .sbToggle{
+    display: block;
+}
+.additionalParam .param-baggage-two .sbOptions a, .additionalParam .param-baggage-three .sbOptions a{
+    font-size: 15px;
+}
+#additionalParameters   .additionalParam.nonToggle .param-baggage-two .sbHolder{
+    width: 110px !important;
+}
+.collapse.in #date_from-row .sbSelector{
+    width: auto;
+}
+.amount-block-man li{
+    display: inline-block;
+    list-style: none;
+}
+img.loading { margin:10px auto; display: block; width: 10%; }
+
+.c-poputchikOrder.r-details .left_column{
+    /*float: left;*/
+    /*position: relative;*/
+}
+
+.c-poputchikOrder.r-details .wraper-for-marging .poput-order-details {
+    width: 100%;
+    padding: 0 0 10px 0;
+    margin-bottom: 30px;
+    /*width: 620px;*/
+}
+.c-poputchikOrder.r-details .wraper-for-marging .poput-order-details {
+    /*padding: 0 20px !important;*/
+}
+
+.c-poputchikOrder.r-details .poput-order,.c-poputchikOrder.r-details .poput-orders-filter,.c-poputchikOrder.r-details .not-results {
+    width: 650px;
+    margin: 30px auto 0 0;
+    border: 1px solid #bdc3c7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+.c-poputchikOrder.r-details .filled {
+    position: absolute;
+    top: -12px;
+    left: 157px;
+    width: 320px;
+    padding: 0px 11px;
+    border: 1px solid #d2d3d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 23px;
+    margin: 0px;
+    margin-left: -150px;
+    text-align: center;
+    background-color: #c0392b;
+    color: #FFF;
+    text-transform: capitalize;
+}
+.c-poputchikOrder.r-details .poput-order .left {
+    /*width: 100px;*/
+    text-align: center;
+    float: left;
+    width: 225px;
+}
+.c-poputchikOrder.r-details .left {
+    /*float: left !important;*/
+}
+.c-poputchikOrder.r-details .left .photo {
+    display: block;
+    margin: 20px auto 0;
+}
+.c-poputchikOrder.r-details .trip-page .poput-order .right {
+    margin-top: 15px;
+    float: left;
+    width: 74%;
+}
+.c-poputchikOrder.r-details .poput-order .fromto {
+    position: relative;
+    /*padding-bottom: 15px;*/
+    border-bottom: 1px solid #bbbdbf;
+}
+.c-poputchikOrder.r-details .poput-order .fromto h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.c-poputchikOrder.r-details .poput-order .fromto .route-details {
+    margin-top: 5px;
+}
+.c-poputchikOrder.r-details .right {
+    position: relative;
+    /*float: right !important;*/
+    /*max-width: 455px;*/
+}
+.c-poputchikOrder.r-details .right_column {
+    width: 231px!important;
+    float: right!important;
+    position: relative;
+}
+.c-poputchikOrder.r-details .poput-order .s-header{
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+.c-poputchikOrder.r-details .poput-order .label {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    padding-bottom: 5px;
+    color: #000000;
+    font-family: Roboto-Regular;
+}
+.c-poputchikOrder.r-details .poput-order .save_info {
+    font-family: Roboto;
+    font-weight: 400;
+    color: #929497;
+    text-align: left;
+    font-style: italic;
+    font-family: Roboto-Regular;
+}
+.c-poputchikOrder.r-details .poput-order .settlement {
+    font-size: 12px;
+}
+.c-poputchikOrder.r-details .poput-order .s-delim-new {
+
+    /*font-size: 11px;*/
+}
+.c-poputchikOrder.r-details .main-collum-wrepper{
+    padding: 0;
+}
+.c-poputchikOrder.r-details .date_info{
+    position: absolute;
+    top: -12px;
+    left: 157px;
+    width: 320px;
+    padding: 0px 11px;
+    border: 1px solid #d2d3d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 23px;
+    margin: 0px;
+    margin-left: -150px;
+    text-align: center;
+    background-color: #c0392b;
+    color: #FFF;
+    text-transform: capitalize;
+}
+
+.poput-order .item-row {
+    padding-top: 14px;
+    position: relative;
+    margin-right: 0;
+}
+
+.route-type-city .route-type-el-intercity { display: none; }
+.route-type-intercity .route-type-el-city { display: none; }
+.route-type-city .route-type-el-city {
+    display: inline-block;
+    width: 100%;
+}
+.route-type-intercity .route-type-el-intercity {display: inline-block; }
+
+
+.type-order > div > .r-item.first {
+    /*margin: 0 9px 0 0;*/
+    /*float:left;*/
+}
+

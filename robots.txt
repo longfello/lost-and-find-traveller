@@ -1,0 +1,26 @@
+User-Agent: *
+Disallow: /poputchikOrder
+Disallow: /*?search
+Disallow: /ru/order/complete
+Disallow: /user/login
+Disallow: /feedback
+Disallow: /user/recovery
+Sitemap: http://poputchik.infotoway.ru/sitemap.xml
+
+User-Agent: GoogleBot
+Disallow: /poputchikOrder
+Disallow: /*?search
+Disallow: /ru/order/complete
+Disallow: /user/login
+Disallow: /feedback
+Disallow: /user/recovery
+Sitemap: http://poputchik.infotoway.ru/sitemap.xml
+
+User-Agent: YandexBot
+Disallow: /poputchikOrder
+Disallow: /*?search
+Disallow: /ru/order/complete
+Disallow: /user/login
+Disallow: /feedback
+Disallow: /user/recovery
+Sitemap: http://poputchik.infotoway.ru/sitemap.xml

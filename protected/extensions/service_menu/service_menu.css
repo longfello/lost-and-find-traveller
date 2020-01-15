@@ -1,0 +1,52 @@
+
+.normal_button{
+	width:330px; 
+	height:50px;
+	background-color:#1cb6e9;
+}
+.button_1_5{
+	width:230px;
+	height:75px;
+	background-color:#1cb6e9;
+}
+.narrow_button.left{float:left;}
+.narrow_button.right{float:right;}
+.narrow_button{
+	
+
+	width:160px; 
+	height:50px;
+	background-color:#1cb6e9;
+}
+.green_button{
+	width:330px; 
+	height:50px;
+	background-color:#37b34a;
+}
+.service_menu{
+
+	-moz-border-radius:  5px; /* FF1+ */
+	-webkit-border-radius:  5px; /* Saf3+, Chrome */
+	-khtml-border-radius:  5px; /* old Konqueror browsers */ 
+	border-radius:  5px; /* Opera 10.5+, IE 9 */ 
+	margin-bottom:10px;	
+}
+.service_menu:hover, .service_menu.normal_button:hover{
+border-bottom:4px solid #067AA0;
+margin-top:-4px;
+
+}
+.service_menu.green_button:hover{
+border-bottom:4px solid #175a21;
+margin-top:-4px;	
+
+}
+.menu_icon1{ background: url('/images/icons/menu_icon1.png') 50% 0 no-repeat;}
+.menu_icon2{ background: url('/images/icons/menu_icon2.png') 50% 0 no-repeat;}
+.menu_icon3{ background: url('/images/icons/menu_icon3.png') 50% 0 no-repeat;}
+.menu_icon4{ background: url('/images/icons/menu_icon4.png') 50% 0 no-repeat;}
+.menu_icon5{ background: url('/images/icons/menu_icon5.png') 50% 0 no-repeat;}
+.menu_icon6{ background: url('/images/icons/menu_icon6.png') 50% 0 no-repeat;}
+.menu_icon7{ background: url('/images/icons/menu_icon7.png') 50% 0 no-repeat;}
+.menu_icon8{ background: url('/images/icons/menu_icon8.png') 50% 0 no-repeat;}
+.menu_icon9{ background: url('/images/icons/menu_icon9.png') 50% 0 no-repeat;}
